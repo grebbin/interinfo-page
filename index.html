@@ -1,63 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head></head>   
+<head>  
 <meta charset="UTF-8">
-<title>Parallax One Pager</title>
-</head>
+<title>Parallax Scrolling</title>
+<link rel="stylesheet" href="https://use.typekit.net/zss7jne.css">
 
 <style>
+    html {
+        background-color: #838b9e;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
 
-body {
-    font-family: Helvetica, Sans-Serif;
-    color: rgb(21, 21, 21);
-    margin: 5vw;
-}
+    .html::-webkit-scrollbar {
+        display: none;
+    }
 
-.onepager {
-    font-size: 20pt;
-}
+    body {
+        margin: 0;
+    }
 
-a {
-    text-decoration: none;
-}
+    .keyart {
+        position: relative;
+        z-index: 1;
+    }
 
-a:hover {
-    color: rgb(12, 12, 186);
-}
+    .keyart_layer {
+        background-position: center;
+        background-size: auto 100vh;
+        background-repeat: repeat-x;
+        width: 100vw;
+        position: absolute;
+    }
 
-a:visited {
-    color: palevioletred;
-}
+    .keyart, .keyart_layer {
+        height: 100vh;
+    }
 
-a:visited:hover {
-    color: rgb(213, 71, 118);
-}
+    .keyart_layer.parallax {
+        position: fixed;
+    }
 
-h3 {
-    margin-top: 10vh;
-    margin-bottom: 0.5vh;
-}
+    #keyart1 {
+        background-image: url('keyart/keyart13.png');
+    }
+    #keyart2 {
+        background-image: url('keyart/keyart12.png');
+    }
+    #keyart3 {
+        background-image: url('keyart/keyart11.png');
+    }
+    #keyart4 {
+        background-image: url('keyart/keyart10.png');
+    }
+    #keyart5 {
+        background-image: url('keyart/keyart9.png');
+    }
+    #keyart6 {
+        background-image: url('keyart/keyart8.png');
+    }
+    #keyart7 {
+        background-image: url('keyart/keyart7.png');
+    }
+    #keyart8 {
+        background-image: url('keyart/keyart6.png');
+    }
+    #keyart9 {
+        background-image: url('keyart/keyart5.png');
+    }
+    #keyart10 {
+        background-image: url('keyart/keyart4.png');
+    }
+    #keyart11 {
+        background-image: url('keyart/keyart3.png');
+    }
+    #keyart12 {
+        background-image: url('keyart/keyart2.png');
+    }
+    #keyart13 {
+        background-image: url('keyart/keyart1.png');
+    }
 
-p {
-    margin-top: 1vh;
-    margin-bottom: 5vh;
-}
+    .seperator {
+        width: 100%;
+        height: 10vh;
+        position: relative;
+        z-index: 999;
+        margin-bottom: -10vh;
+        margin-top: 30vh;
+        background-repeat: repeat-x;
+        background-size: auto 10vh;
+    }
+
+    .seperator, .seperator_white {
+        background-image: url('elements/seperator_white.svg');
+    }
+
+    section.about {
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        z-index: 2;
+        background: white;
+        margin-top: 10vh;
+    }
+
+    h1 {
+        font-family: "narkiss-yair-variable", sans-serif;
+        font-variation-settings: "MONO" 100, "wght" 400;
+        font-size: 3em;
+        margin-top: 15vh;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    .text {
+        font-family: "narkiss-yair-variable", sans-serif;
+        font-variation-settings: "MONO" 100, "wght" 400;
+        font-size: 1.2em;
+        line-height: 1.3em;
+        margin-top: 15vh;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        margin-bottom:30vh;
+    }
 
 </style>
+</head>
+
 <body>
+    <div class = "keyart" id="parallax">
+        <div class="keyart_layer parallax" id="keyart1" data-speed="0"></div>
+        <div class="keyart_layer parallax" id="keyart2" data-speed="1" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart3" data-speed="2" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart4" data-speed="4" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart5" data-speed="6" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart6" data-speed="8" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart7" data-speed="10" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart8" data-speed="18" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart9" data-speed="20" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart10" data-speed="30" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart11" data-speed="40" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart12" data-speed="50" style="transform: translate3d(0px, 0px, 0px)"></div>
+        <div class="keyart_layer parallax" id="keyart13" data-speed="60" style="transform: translate3d(0px, 0px, 0px)"></div>
+    </div>  
 
-<h1>Select where to head</h1>
+    <div class = "seperator sepeartor_white">
 
-<a class="onepager" href="onepager/parallax.html">Parallax One Pager</a>
-  
-<h3>Experiments</h3>
-<p>Testing components for the One Pager</p>
-
-<ul>
-
-<li><a href="experiment/scrolling.html">Scrolling Experiment</a></li>
-
-</ul>   
+    <section class = "about">
+        <h1>What is Parallax Scrolling?<h2>
+        <p class = "text">Parallax scrolling is a design technique that creates a sense of movement, fluidity and depth. It is a way of adding a more or less faux three-dimensionality and therefore bringing immersion and life to the web experience. The effect can be used to display content dynamically in an eye grabbing way and is easy to understand for visitors, because it borrows from what we see in our everyday life.</p>
+    </section>   
 
 </body>
+<script>
+
+    function keyartParallax() {
+   
+
+        window.addEventListener("scroll", function(event){
+
+            var top = this.pageYOffset;
+            var layers = document.getElementsByClassName("parallax");
+            var layer, speed, yPos;
+
+            for (var i = 0; i < layers.length; i++) {
+                layer = layers[i];
+                speed = layer.getAttribute('data-speed');
+                var yPos = -(top * speed / 100);
+                layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+            }
+
+        });
+    }
+
+    document.body.onload = keyartParallax();
+
+</script>    
 </html>
