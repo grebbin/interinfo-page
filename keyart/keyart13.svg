@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3500 1238">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3b3529;
+      }
+
+      .cls-2 {
+        fill: #838b9e;
+      }
+
+      .cls-3 {
+        fill: #e9edd2;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" width="3500" height="1238"/>
+  <rect class="cls-1" y="194" width="3500" height="10"/>
+  <circle class="cls-3" cx="1474" cy="118.5" r="34.5"/>
+  <rect class="cls-3" x="1440" y="216" width="69" height="10"/>
+  <rect class="cls-3" x="1440" y="228" width="69" height="7"/>
+  <rect class="cls-3" x="1440" y="237" width="69" height="5"/>
+  <rect class="cls-3" x="1440" y="244" width="69" height="4"/>
+  <rect class="cls-3" x="1440" y="252" width="69" height="3"/>
+  <rect class="cls-3" x="1440" y="262" width="69" height="2"/>
+</svg>
