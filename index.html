@@ -137,7 +137,7 @@
 
     .unique {
         width: 100%;
-        height: fit-content;
+        height: 120vh;
         z-index: 4;
         background: #838b9e;
         margin-top: 9.9vh;
@@ -155,22 +155,21 @@
         display: flex;
         flex-direction: row;
         gap: 10vw;
-        margin-top: 15vh;
         margin-left: 10vw;
         margin-right: 10vw;
-        margin-bottom: 30vh;
-    }
-
-    .flex_element {
-        align-self: center;
-        flex-basis: content;
+        margin-bottom: 20vh;
     }
 
     .full {
         margin-top: 15vh;
         margin-left: 20vw;
         margin-right: 20vw;
-        margin-bottom: 30vh;
+        margin-bottom: 30vh; 
+    }
+
+    .flex_element {
+        align-self: flex-start;
+        flex-basis: content;
     }
 
     h1 {
@@ -181,6 +180,43 @@
         font-size: 1.5em;
         line-height: 1.5em;
         margin-top: 15vh;
+    }
+
+    .small_text {
+        font-size: 1em;
+        line-height: 1.2em;
+        margin-top: 3vh;
+    }
+
+    .small_video {
+        width: 80%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .video_container {
+        margin: 0;
+        width: 500px;
+        height: 300px;
+    }
+
+    .parallax_text {
+        color:white;
+        white-space: nowrap;
+        position: absolute;
+        font-size: calc(1vw + 1vh);
+        line-height: calc(2vw + 1vh);
+        color:white;
+        margin-top: 60vh;
+    }
+
+    #top {
+        top: 0;
+    }
+
+    #bottom {
+        top: calc(60vw + 60vh);
     }
 
     a {
@@ -265,6 +301,10 @@
             margin-top: 4.9vh;
         }
 
+        .unique {
+            height: 60vh;
+        }
+
         .flexbox {
             margin-top: 5vh;
             margin-left: 10vw;
@@ -283,6 +323,30 @@
 
         .text {
             margin-top: 5vh;
+        }
+
+        .small_text {
+            margin-top: 2.5vh;
+            font-size: 1.5em;
+            line-height: 1.5em;
+        }
+
+        .small_video {
+            border-radius: 30px;
+        }
+
+        .video_container {
+            margin: 0;
+            width: 1000px;
+            height: 600px;
+        }
+
+        .parallax_text {
+            margin-top: 30vh;
+        }    
+
+        #bottom {
+            top: 150vh;
         }
 
         .mobile, .source {
@@ -322,24 +386,27 @@
     </div>  
 
     <figcaption>Reenactment & Expansion of <br>
-        <a href= "https://www.charleyharperartstudio.com/skimmerscape-serigraph.html" title = "Original found at Charley Harper Art Studio: Skimmerscape—Serigraph Print" id = "hyperlink" style = "color:white;">Charley Harper’s <em style = "font-style: italic;">Skimmerscape</em>, 1976</a>
+        <a href= "https://www.charleyharperartstudio.com/skimmerscape-serigraph.html" title = "Original found at Charley Harper Art Studio: Skimmerscape—Serigraph Print" id = "hyperlink" style = "color:white;">
+            Charley Harper’s <em style = "font-style: italic;">Skimmerscape</em>, 1976
+        </a>
     </figcaption>    
 
     <div class = "seperator1">
 
     <section class = "about">
         <div class = "flexbox">
-        <div class = "flex_element">
-            <h1 style = "color:black">What is Parallax Scrolling?</h1>
-            <p class = "text" style = "color:black">
-                Parallax scrolling is a design technique that creates a sense of movement, fluidity and depth. 
-                It is a way of adding a more or less faux three-dimensionality and therefore bringing immersion and life to the web experience. 
-                The effect can be used to display content dynamically in an eye grabbing way and is easy to understand for visitors, because it borrows from what we see in our everyday life.<a class = mobile id = "source">1</a><sup><a id = "source">1</a></sup></p>
-        </div>
-        <video class = "flex_element" id="scroll_video" width = "500vh">
-            <source src = "elements/scimmerscape.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+            <div class = "flex_element" style = "align-self: flex-start;">
+                <h1 style = "color:black">What is Parallax Scrolling?</h1>
+                <p class = "text" style = "color:black">
+                    Parallax scrolling is a design technique that creates a sense of movement, fluidity and depth. 
+                    It is a way of adding a more or less faux three-dimensionality and therefore bringing immersion and life to the web experience. 
+                    The effect can be used to display content dynamically in an eye grabbing way and is easy to understand for visitors, because it borrows from what we see in our everyday life.<a class = mobile id = "source">1</a><sup><a id = "source">1</a></sup>
+                </p>
+            </div>
+            <video class = "flex_element" style = "align-self: center;" id="scroll_video" width = "500vh">
+                <source src = "elements/scimmerscape.mp4" type="video/mp4">
+                    Your browser does not support this animation.
+            </video>
         </div>
     </section>
 
@@ -347,28 +414,90 @@
     
     <section class = "unique">
         <div class = "full">
-        <h1 style = "color:white">Uniqueness of Parallax Scrolling</h1>
-        <p class = "text" style = "color:white">
-            No need to decipher what can be clicked and what to type into a text field. 
-            Parallax scrolling doesn’t demand complicated input and understanding of the web. 
-            It happens in addition and bursts to life while traversing the web page through scrolling.<a class = "mobile" id = "source">1</a><sup><a id = "source">1</a></sup>
-            The effect is not a good fit for every side and can be distracting, overbearing and confusing (like this paragraph). 
-            But if done right, it has the potential to keep the visitor engaged and encourage them to continue the scrolling.<a class = "mobile" id = "source">4</a><sup><a id = "source">4</a></sup></p>
+            <h1 style = "color:white;">Uniqueness of Parallax Scrolling</h1>
+            <p class = "parallax_text parallax" id = "top" data-speed="0">
+                No need to decipher what can be clicked <br />
+                <br />
+                Parallax scrolling doesn’t demand <br />
+                <br />
+                It happens in addition and bursts to life while <br />
+                <br />
+                The effect is not a good fit for every side <br />
+                <br />
+                (like this paragraph). But if done right, <br />
+                <br />
+                engaged and encourage them to continue the scrolling.<a class = "mobile" id = "source">4</a><sup><a id = "source">4</a></sup>
+            </p>
+
+            <p class = "parallax_text parallax" id = "bottom" data-speed="60" style="transform: translate3d(0px, 0px, 0px)">
+                <br />
+                and what to type into a text field. <br />
+                <br />
+                complicated input and understanding of the web. <br />
+                <br />
+                traversing the web page through scrolling.<a class = "mobile" id = "source">1</a><sup><a id = "source">1</a></sup> <br />
+                <br />
+                and can be distracting, overbearing and confusing <br />
+                <br />
+                it has the potential to keep the visitor <br />
+            </p>
         </div>
-    </section>   
+    </section> 
 
     <div class = "seperator3">    
         
     <section class = "history">
-        <div class = "flexbox">
-        <div class = "flex_element">
-            <h1 style = "color:black">What is Parallax Scrolling?</h1>
-            <p class = "text" style = "color:black">
-                Parallax scrolling is a design technique that creates a sense of movement, fluidity and depth. 
-                It is a way of adding a more or less faux three-dimensionality and therefore bringing immersion and life to the web experience. 
-                The effect can be used to display content dynamically in an eye grabbing way and is easy to understand for visitors, because it borrows from what we see in our everyday life.<a class = mobile id = "source">1</a><sup><a id = "source">1</a></sup></p>
-        </div>
-        <img class = "flex_element" src = "elements/scimmerscape.png">
+        <h1 style = "color:black; margin-left: 10vw; margin-top: 15vh; margin-bottom: 10vw;">History of the Parallax Effect</h1>
+        <div class = "flexbox" style = "flex-wrap: wrap; gap: 5vw;">
+            <div class = "flex_element" style = "flex: 10vw;">
+                <div class = "video_container">
+                    <video class = "small_video" loop muted autoplay poster = "elements/clear_thumb.png">
+                        <source src="">
+                        Your browser does not support this video.
+                    </video>
+                </div>
+                <p class = "small_text" style = "color:black; width: 80%;">
+                    In real life, and hence since the beginning of life, you can see the effect while gazing out of the window in the back of a car. 
+                    Street lamps appear to rush past you while buildings in the distance stroll by slowly. <br />
+                    <a class = mobile id = "source">1</a><sup><a id = "source">1</a></sup>
+                </p>
+            </div>
+            <div class = "flex_element" style = "flex: 10vw;">
+                <div class = "video_container">
+                    <video class = "small_video" loop muted autoplay poster = "elements/snowwhite_thumb.png">
+                        <source src="elements/snowwhite.mp4">
+                        Your browser does not support this video.
+                    </video>
+                </div>
+                <p class = "small_text" style = "color:black; width: 80%;">
+                    The first parallax effect on screen is from the 1930s and comes as a tool used in 2D animated movies. <br />
+                    <a class = mobile id = "source">1</a><sup><a id = "source">1</a></sup>
+                </p>
+            </div>
+            <div class = "flex_element" style = "flex: 10vw;">
+                <div class = "video_container">
+                    <video class = "small_video" loop muted autoplay poster = "elements/sonic_thumb.png">
+                        <source src="elements/sonic.mp4">
+                        Your browser does not support this video.
+                    </video>
+                </div>
+                <p class = "small_text" style = "color:black; width: 80%;">
+                    Next it appears in the 1980s as a way around technical restrictions in early 2D video games. <br />
+                    <a class = mobile id = "source">1</a><sup><a id = "source">1</a></sup>
+                </p>
+            </div>
+            <div class = "flex_element" style = "flex: 10vw;">
+                <div class = "video_container">
+                    <video class = "small_video" loop muted autoplay poster = "elements/clear_thumb.png">
+                        <source src="">
+                        Your browser does not support this video.
+                    </video>
+                </div>
+                <p class = "small_text" style = "color:black; width: 80%;">
+                    In the 2000s parallax on the web started very simple with only few layers along the advancement of technical possibilities. <br />
+                    <a class = mobile id = "source">4</a><sup><a id = "source">4</a></sup>
+                </p>
+            </div>
         </div>
     </section>
 
@@ -400,8 +529,8 @@
         //const minScrollPct = 0.48;
        // const maxScrollPct = 0.60;
     //} else {
-        const minScrollPct = 0.28;
-        const maxScrollPct = 0.40;
+        const minScrollPct = 0.22;
+        const maxScrollPct = 0.35;
     //}
 
     document.addEventListener("scroll", () => {
