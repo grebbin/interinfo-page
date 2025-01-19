@@ -18,13 +18,8 @@ function keyartParallax() {
 
 const video = document.getElementById('scroll_video');
 
-//if (window.innerWidth <= 1000) {
-    //const minScrollPct = 0.48;
-   // const maxScrollPct = 0.60;
-//} else {
     const minScrollPct = 0.22;
     const maxScrollPct = 0.35;
-//}
 
 document.addEventListener("scroll", () => {
 
