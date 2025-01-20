@@ -356,7 +356,7 @@ sup {
 	transition-duration: 0.3s;
 }
 
-#video_source {
+.video_source {
 	position: relative;
 	z-index: 999;
 	float: right;
@@ -373,11 +373,11 @@ sup {
 	border-radius: 0.3em;
 }
 
-.small_video:hover~#video_source {
+.small_video:hover~.video_source {
 	display: block;
 }
 
-#video_source:hover {
+.video_source:hover {
 	display: block;
 }
 
@@ -533,11 +533,11 @@ sup {
 		margin-left: 5vw;
 	}
 
-	.small_video:hover~#video_source {
+	.small_video:hover~.video_source {
 		display: none;
 	}
 
-	#video_source:hover {
+	.video_source:hover {
 		display: none;
 	}
 }
