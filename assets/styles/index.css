@@ -326,7 +326,7 @@ a {
 	text-decoration: none;
 }
 
-figcaption {
+span {
 	width: 100%;
 	top: 80vh;
 	font-size: 1em;
@@ -340,7 +340,7 @@ sup {
 	line-height: 1.5em;
 }
 
-#source {
+.source {
 	color: #e6813b;
 	background: #f8eadf;
 	padding-left: 0.3em;
@@ -349,7 +349,7 @@ sup {
 	transition-duration: 0.3s;
 }
 
-#source:hover {
+.source:hover {
 	color: white;
 	background: #e6813b;
 	cursor: pointer;
@@ -365,7 +365,7 @@ sup {
 	display: none;
 }
 
-#footer_source {
+.footer_source {
 	color: white;
 	background: black;
 	padding-left: 0.3em;
@@ -381,11 +381,11 @@ sup {
 	display: block;
 }
 
-#hyperlink {
+.hyperlink {
 	transition-duration: 0.3s;
 }
 
-#hyperlink:hover {
+.hyperlink:hover {
 	background: #e6813b;
 	cursor: pointer;
 	transition-duration: 0.3s;
@@ -394,18 +394,18 @@ sup {
 	border-radius: 0.3em;
 }
 
-#footer_hyperlink {
+.footer_hyperlink {
 	text-decoration: underline;
 	color: #e6813b;
 	cursor: pointer;
 	transition-duration: 0.3s;
 }
 
-#footer_hyperlink:hover {
+.footer_hyperlink:hover {
 	text-decoration: none;
 }
 
-#footer_hyperlink:visited {
+.footer_hyperlink:visited {
 	color: #e6813b;
 }
 
@@ -527,9 +527,9 @@ sup {
 		display: none;
 	}
 
-	figcaption {
+	span {
 		font-size: 1em;
-		top: 95vh;
+		top: 94vh;
 		margin-left: 5vw;
 	}
 
