@@ -1,6 +1,6 @@
 function keyartParallax() {
-   
-    window.addEventListener("scroll", function(event){
+
+    window.addEventListener("scroll", function(event) {
 
         var top = this.pageYOffset;
         var layers = document.getElementsByClassName("parallax");
@@ -18,8 +18,8 @@ function keyartParallax() {
 
 const video = document.getElementById('scroll_video');
 
-    const minScrollPct = 0.22;
-    const maxScrollPct = 0.35;
+const minScrollPct = 0.15;
+const maxScrollPct = 0.28;
 
 document.addEventListener("scroll", () => {
 
@@ -30,9 +30,9 @@ document.addEventListener("scroll", () => {
     if (pct >= minScrollPct && pct <= maxScrollPct) {
         if (video.readyState >= 1) {
 
-        const playbackPct = (pct - minScrollPct) / (maxScrollPct - minScrollPct);
-        video.currentTime = video.duration * playbackPct;
-    }
+            const playbackPct = (pct - minScrollPct) / (maxScrollPct - minScrollPct);
+            video.currentTime = video.duration * playbackPct;
+        }
     } else if (pct < minScrollPct) {
         video.currentTime = 0;
 
@@ -41,5 +41,26 @@ document.addEventListener("scroll", () => {
     }
 });
 
+const tabs = document.querySelectorAll('.tab');
+const switchable = document.querySelectorAll('.switchable');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        switchable.forEach(cb => cb.classList.remove('active'));
+
+        tab.classList.add('active');
+        const tabContent = document.getElementById(tab.dataset.tab);
+        tabContent.classList.add('active');
+
+        if (tab.dataset.tab === 'css') {
+            document.getElementById('css_video').classList.add('active');
+            document.getElementById('html_video').classList.remove('active');
+        } else {
+            document.getElementById('html_video').classList.add('active');
+            document.getElementById('css_video').classList.remove('active');
+        }
+    });
+});
 
 document.body.onload = keyartParallax();
