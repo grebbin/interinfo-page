@@ -100,7 +100,6 @@ body {
 	z-index: 999;
 	background-image: url('../images/ui/seperator_white.svg');
 	margin-bottom: -10vh;
-	margin-top: 30vh;
 	background-repeat: repeat-x;
 	background-size: auto 10vh;
 }
@@ -144,6 +143,7 @@ body {
 section {
 	padding-top: 10vh;
 	padding-bottom: 5vh;
+	position: relative;
 }
 
 .about {
@@ -180,6 +180,7 @@ section {
 footer {
 	width: 100%;
 	height: fit-content;
+	position: absolute;
 	z-index: 9;
 	background: #E9EDD2;
 	padding-top: 10vh;
@@ -206,7 +207,6 @@ footer {
 	align-self: flex-start;
 	flex-basis: content;
 }
-
 
 .tabs {
 	display: flex;
@@ -244,7 +244,7 @@ footer {
 	margin-top: 3vh;
 	background-image: url('../images/ui/code_background.svg');
 	background-size: auto 10vh;
-	background-repeat: repeat-y;
+	background-repeat: repeat-x repeat-y;
 	background-color: #f3f6ff;
 	color: black;
 	font-size: 1em;
@@ -278,6 +278,11 @@ h1 {
 	font-size: 1em;
 	line-height: 1.2em;
 	margin-top: 4vh;
+}
+
+pre {
+	font-size: 1.25em;
+	line-height: 1.25em;
 }
 
 i {
@@ -398,6 +403,7 @@ sup {
 	text-decoration: underline;
 	color: #e6813b;
 	cursor: pointer;
+	font-size: 1em;
 	transition-duration: 0.3s;
 }
 
@@ -430,15 +436,13 @@ sup {
 
 	.seperator1 {
 		margin-bottom: -5vh;
-		margin-top: 30vh;
 		background-size: auto 5vh;
 	}
 
 	.seperator2,
 	.seperator3,
 	.seperator_footer {
-		margin-bottom: -5vh;
-		margin-top: 0vh;
+		height: 5vh;
 		background-size: auto 5vh;
 	}
 
@@ -454,7 +458,7 @@ sup {
 	}
 
 	.flexbox {
-		margin-top: 5vh;
+		margin-top: 2.5vh;
 		margin-left: 10vw;
 		margin-right: 10vw;
 		margin-bottom: 10vh;
@@ -491,6 +495,11 @@ sup {
 
 	i {
 		font-size: 1em;
+		line-height: 1.5em;
+	}
+
+	pre {
+		font-size: 0.9em;
 		line-height: 1.5em;
 	}
 
