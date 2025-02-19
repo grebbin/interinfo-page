@@ -52,15 +52,45 @@ tabs.forEach(tab => {
         tab.classList.add('active');
         const tabContent = document.getElementById(tab.dataset.tab);
         tabContent.classList.add('active');
-
-        if (tab.dataset.tab === 'css') {
-            document.getElementById('css_video').classList.add('active');
-            document.getElementById('html_video').classList.remove('active');
-        } else {
-            document.getElementById('html_video').classList.add('active');
-            document.getElementById('css_video').classList.remove('active');
-        }
     });
 });
 
+function updateIframe() {
+    let css_code = document.getElementById("css_code").value;
+    let iframe = document.getElementById("code_output");
+
+    let html_code = `
+    <body>
+
+    <header></header>
+                           
+    <div id="back">
+        <img src="assets/images/elements/anhinga.jpg" width="50%">
+    </div>
+
+    <div id="front">
+        <img src="assets/images/elements/owltercation.jpg" width="200%">
+    </div>
+                           
+    <footer></footer>
+                           
+    </body>
+    `
+
+    let combinedCode = `
+    <html lang="en">
+    <head>
+        <style>${css_code}</style>
+    </head>
+    ${html_code}
+    </html>
+    `;
+
+    iframe.contentWindow.document.open();
+    iframe.contentWindow.document.write(combinedCode);
+    iframe.contentWindow.document.close();
+
+}
+
 document.body.onload = keyartParallax();
+document.body.onload = updateIframe();
